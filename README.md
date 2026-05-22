@@ -18,7 +18,7 @@
   pnpm dev
   ```
 
-  Le site sera disponible sur `http://localhost:5173/`
+  Le site sera disponible sur `http://localhost:5173/` (ou 5174, 5175... si le port est déjà occupé par un autre serveur)
 
   ## Build de production
 
