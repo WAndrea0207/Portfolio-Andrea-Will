@@ -70,13 +70,13 @@ export function About() {
 
               <div className="space-y-6 text-foreground/70 text-lg leading-relaxed">
                 <p>
-                  With over 5 years of experience in full-stack development, I specialize
-                  in creating scalable web applications that combine cutting-edge technology
-                  with intuitive user experiences.
+                  I'm a developer with a non-traditional background and a strong drive to learn, build, and
+                  improve. My career change into tech taught me how to adapt quickly, solve problems with
+                  curiosity, and stay persistent when facing new challenges.
                 </p>
                 <p>
-                  I believe in writing clean, maintainable code and collaborating closely
-                  with designers and product teams to deliver exceptional digital products.
+                  Today, I create clean, user-focused web projects and keep sharpening my skills 
+                  through hands-on work and continuous learning.
                 </p>
               </div>
             </motion.div>
