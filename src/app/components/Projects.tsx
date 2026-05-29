@@ -2,10 +2,25 @@ import { motion } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 
+// ============================
+// INTERFACE = la "forme" d'un objet
+// Ça dit : un Project DOIT avoir un id (nombre), un title (texte), etc.
+// Si tu oublies un champ, TypeScript te prévient immédiatement.
+// ============================
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tags: string[];
+  size: 'large' | 'medium' | 'small'; // Ne peut être QUE l'une de ces 3 valeurs
+}
+
 export function Projects() {
   const [isVisible, setIsVisible] = useState(false);
-  const [hoveredProject, setHoveredProject] = useState(null);
-  const sectionRef = useRef(null);
+  // "number | null" = soit un nombre, soit rien (null)
+  const [hoveredProject, setHoveredProject] = useState<number | null>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -24,7 +39,8 @@ export function Projects() {
     return () => observer.disconnect();
   }, []);
 
-  const projects = [
+  // Project[] = un tableau d'objets qui respectent l'interface Project
+  const projects: Project[] = [
     {
       id: 1,
       title: 'AI Analytics Dashboard',
@@ -75,15 +91,13 @@ export function Projects() {
     },
   ];
 
-  const getGridClass = (size) => {
+  const getGridClass = (size: Project['size']) => {
     switch (size) {
       case 'large':
         return 'col-span-2 row-span-2';
       case 'medium':
         return 'col-span-2 row-span-1';
       case 'small':
-        return 'col-span-1 row-span-1';
-      default:
         return 'col-span-1 row-span-1';
     }
   };

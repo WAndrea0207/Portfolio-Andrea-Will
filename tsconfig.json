@@ -1,0 +1,47 @@
+{
+  "compilerOptions": {
+    /* Langage cible : ESNext = le JavaScript le plus moderne */
+    "target": "ESNext",
+
+    /* Système de modules : ESNext = import/export moderne */
+    "module": "ESNext",
+
+    /* Comment résoudre les imports (style bundler = comme Vite) */
+    "moduleResolution": "bundler",
+
+    /* Activer le JSX pour React (react-jsx = pas besoin d'importer React dans chaque fichier) */
+    "jsx": "react-jsx",
+
+    /* Vérifications strictes (attrape plus d'erreurs) */
+    "strict": true,
+
+    /* Ne pas compiler les fichiers — Vite s'en charge, TypeScript ne fait que vérifier */
+    "noEmit": true,
+
+    /* Permettre d'importer des fichiers .json */
+    "resolveJsonModule": true,
+
+    /* Chaque fichier est un module isolé (nécessaire pour Vite) */
+    "isolatedModules": true,
+
+    /* Éviter les problèmes d'import entre CommonJS et ESModules */
+    "esModuleInterop": true,
+
+    /* Inclure les types du DOM (window, document, etc.) et d'ES2020+ */
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+
+    /* Forcer les chemins d'import à respecter la casse */
+    "forceConsistentCasingInFileNames": true,
+
+    /* Raccourci @ = dossier src/ */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+
+    /* Ne pas vérifier les types des dépendances (plus rapide) */
+    "skipLibCheck": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["node_modules", "dist"]
+}

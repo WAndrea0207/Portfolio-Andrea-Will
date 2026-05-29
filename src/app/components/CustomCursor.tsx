@@ -2,16 +2,19 @@ import { useEffect, useState } from 'react';
 import { motion } from 'motion/react';
 
 export function CustomCursor() {
+  // { x: number, y: number } — TypeScript comprend automatiquement le type grâce à la valeur initiale
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
 
   useEffect(() => {
-    const updateMousePosition = (e) => {
+    // "e: MouseEvent" = on dit que e est un événement souris (pour accéder à clientX, clientY)
+    const updateMousePosition = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY });
     };
 
-    const handleMouseOver = (e) => {
-      const target = e.target;
+    const handleMouseOver = (e: MouseEvent) => {
+      // "as HTMLElement" = on dit à TypeScript que e.target est un élément HTML (pour accéder à .tagName)
+      const target = e.target as HTMLElement;
       if (target.tagName === 'A' || target.tagName === 'BUTTON') {
         setIsHovering(true);
       } else {

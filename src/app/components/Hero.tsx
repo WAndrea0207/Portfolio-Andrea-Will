@@ -2,7 +2,9 @@ import { motion } from 'motion/react';
 import { useEffect, useRef } from 'react';
 
 export function Hero() {
-  const canvasRef = useRef(null);
+  // useRef<HTMLCanvasElement>(null) = on dit que cette ref pointe vers un élément <canvas>
+  // Ça permet à TypeScript de savoir que .getContext('2d') est disponible
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
     const canvas = canvasRef.current;

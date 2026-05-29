@@ -3,7 +3,8 @@ import { useEffect, useRef, useState } from 'react';
 
 export function About() {
   const [isVisible, setIsVisible] = useState(false);
-  const sectionRef = useRef(null);
+  // useRef<HTMLElement>(null) = cette ref pointe vers un élément HTML générique (la <section>)
+  const sectionRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -22,7 +23,8 @@ export function About() {
     return () => observer.disconnect();
   }, []);
 
-  const skills = [
+  // string[] = un tableau de textes
+  const skills: string[] = [
     'React',
     'TypeScript',
     'Node.js',

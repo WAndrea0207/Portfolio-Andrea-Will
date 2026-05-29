@@ -1,7 +1,8 @@
 import { motion } from 'motion/react';
 
 export function Navigation() {
-  const scrollToSection = (id) => {
+  // "id: string" = on dit que le paramètre id doit être du texte
+  const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
