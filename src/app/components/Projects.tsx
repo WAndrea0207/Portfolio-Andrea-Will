@@ -2,23 +2,17 @@ import { motion } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
 import { ExternalLink } from 'lucide-react';
 
-// ============================
-// INTERFACE = la "forme" d'un objet
-// Ça dit : un Project DOIT avoir un id (nombre), un title (texte), etc.
-// Si tu oublies un champ, TypeScript te prévient immédiatement.
-// ============================
 interface Project {
   id: number;
   title: string;
   description: string;
   image: string;
   tags: string[];
-  size: 'large' | 'medium' | 'small'; // Ne peut être QUE l'une de ces 3 valeurs
+  size: 'large' | 'medium' | 'small';
 }
 
 export function Projects() {
   const [isVisible, setIsVisible] = useState(false);
-  // "number | null" = soit un nombre, soit rien (null)
   const [hoveredProject, setHoveredProject] = useState<number | null>(null);
   const sectionRef = useRef<HTMLElement>(null);
 

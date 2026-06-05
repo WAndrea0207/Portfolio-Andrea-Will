@@ -1,9 +1,8 @@
 import { motion } from 'motion/react';
 import { useEffect, useRef } from 'react';
+import { Typewriter } from './Typewriter';
 
 export function Hero() {
-  // useRef<HTMLCanvasElement>(null) = on dit que cette ref pointe vers un élément <canvas>
-  // Ça permet à TypeScript de savoir que .getContext('2d') est disponible
   const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
@@ -76,10 +75,20 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
-            className="text-2xl md:text-3xl text-foreground/80 mb-4"
+            className="text-2xl md:text-3xl text-foreground/80 mb-4 h-[1.2em]"
             style={{ fontFamily: 'var(--font-display)', fontWeight: 500 }}
           >
-            Full Stack Developer
+            <Typewriter
+              phrases={[
+                'Full Stack Developer',
+                'React Enthusiast',
+                'UI / UX Designer',
+                'Problem Solver',
+              ]}
+              typingSpeed={80}
+              deletingSpeed={40}
+              pauseDuration={2000}
+            />
           </motion.p>
 
           <motion.p
