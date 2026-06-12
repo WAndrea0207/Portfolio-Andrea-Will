@@ -72,7 +72,7 @@ export function Contact() {
             className="flex items-center justify-center gap-8 mt-16"
           >
             <a
-              href="https://github.com"
+              href="https://github.com/WAndrea0207"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/50 hover:text-accent transition-colors duration-300"
@@ -81,7 +81,7 @@ export function Contact() {
               <Github size={24} />
             </a>
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/andrea-will/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-foreground/50 hover:text-accent transition-colors duration-300"

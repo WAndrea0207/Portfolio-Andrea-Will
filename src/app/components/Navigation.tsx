@@ -1,7 +1,6 @@
 import { motion } from 'motion/react';
 
 export function Navigation() {
-  // "id: string" = on dit que le paramètre id doit être du texte
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -14,7 +13,7 @@ export function Navigation() {
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6 }}
-      className="fixed top-0 left-0 right-0 z-50 px-8 py-6"
+      className="fixed top-0 left-0 right-0 z-50 px-8 py-6 bg-background border-b border-foreground/10"
     >
       <div className="max-w-[1600px] mx-auto flex justify-end items-center gap-12">
         <button

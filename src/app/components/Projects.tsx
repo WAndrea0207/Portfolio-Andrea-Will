@@ -8,6 +8,7 @@ interface Project {
   description: string;
   image: string;
   tags: string[];
+  github: string;
   size: 'large' | 'medium' | 'small';
 }
 
@@ -33,66 +34,53 @@ export function Projects() {
     return () => observer.disconnect();
   }, []);
 
-  // Project[] = un tableau d'objets qui respectent l'interface Project
   const projects: Project[] = [
     {
-      id: 1,
-      title: 'AI Analytics Dashboard',
-      description: 'Real-time analytics platform for ML model performance monitoring',
-      image: 'https://images.unsplash.com/photo-1720962158883-b0f2021fb51e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaWNhdGlvbiUyMGRhc2hib2FyZCUyMGRhcmslMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzc4ODU0NjkxfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['React', 'D3.js', 'Python'],
+      id: 3,
+      title: 'Sophie Bluel',
+      description: 'Portfolio dynamique avec filtres, modale d\'upload et système de login',
+      image: '/projects/sophie-bluel.webp',
+      tags: ['JavaScript', 'API REST', 'HTML', 'CSS'],
+      github: 'https://portfolio-sophie-bluel-gamma.vercel.app/',
       size: 'large',
     },
     {
       id: 2,
-      title: 'E-Commerce Platform',
-      description: 'Headless commerce solution with custom CMS',
-      image: 'https://images.unsplash.com/photo-1658953229625-aad99d7603b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaWNhdGlvbiUyMGRhc2hib2FyZCUyMGRhcmslMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzc4ODU0NjkxfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['Next.js', 'Stripe', 'PostgreSQL'],
-      size: 'medium',
+      title: 'Mon Vieux Grimoire',
+      description: 'API backend de notation et gestion de livres avec authentification',
+      image: 'https://images.unsplash.com/photo-1524578271613-d550eacf6090?w=1080&q=80',
+      tags: ['Node.js', 'Express', 'MongoDB', 'JWT'],
+      github: 'https://github.com/WAndrea0207/Mon-vieux-Grimoire',
+      size: 'large',
     },
     {
-      id: 3,
-      title: 'Design System',
-      description: 'Component library for enterprise applications',
-      image: 'https://images.unsplash.com/photo-1720962158813-29b66b8e23e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaWNhdGlvbiUyMGRhc2hib2FyZCUyMGRhcmslMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzc4ODU0NjkxfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['React', 'Storybook', 'Tailwind'],
+      id: 1,
+      title: 'Kasa',
+      description: 'Application web de location immobilière avec React et React Router',
+      image: '/projects/kasa.webp',
+      tags: ['React', 'SCSS', 'Vite', 'React Router'],
+      github: 'https://kasa-tau-nine.vercel.app/',
       size: 'medium',
     },
     {
       id: 4,
-      title: 'Cloud Infrastructure',
-      description: 'Scalable microservices architecture on AWS',
-      image: 'https://images.unsplash.com/photo-1687125114671-d45714b4631d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw0fHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaWNhdGlvbiUyMGRhc2hib2FyZCUyMGRhcmslMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzc4ODU0NjkxfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['AWS', 'Docker', 'Kubernetes'],
-      size: 'small',
-    },
-    {
-      id: 5,
-      title: 'Mobile Banking App',
-      description: 'Cross-platform financial services application',
-      image: 'https://images.unsplash.com/photo-1720962158937-7ea890052166?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaWNhdGlvbiUyMGRhc2hib2FyZCUyMGRhcmslMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzc4ODU0NjkxfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['React Native', 'Node.js', 'MongoDB'],
-      size: 'small',
-    },
-    {
-      id: 6,
-      title: 'SaaS Dashboard',
-      description: 'B2B analytics and reporting platform',
-      image: 'https://images.unsplash.com/photo-1559028006-448665bd7c7f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw2fHxtb2Rlcm4lMjB3ZWIlMjBhcHBsaWNhdGlvbiUyMGRhc2hib2FyZCUyMGRhcmslMjBpbnRlcmZhY2V8ZW58MXx8fHwxNzc4ODU0NjkxfDA&ixlib=rb-4.1.0&q=80&w=1080',
-      tags: ['Vue.js', 'GraphQL', 'Redis'],
-      size: 'large',
+      title: 'Nina Carducci',
+      description: 'Optimisation SEO et performances d\'un site de photographe',
+      image: '/projects/nina-carducci.webp',
+      tags: ['SEO', 'Performance', 'Lighthouse', 'Schema.org'],
+      github: 'https://github.com/WAndrea0207/Nina_Carducci',
+      size: 'medium',
     },
   ];
 
   const getGridClass = (size: Project['size']) => {
     switch (size) {
       case 'large':
-        return 'col-span-2 row-span-2';
+        return 'md:col-span-1 md:row-span-2';
       case 'medium':
-        return 'col-span-2 row-span-1';
+        return 'md:col-span-1 md:row-span-1';
       case 'small':
-        return 'col-span-1 row-span-1';
+        return 'md:col-span-1 md:row-span-1';
     }
   };
 
@@ -100,7 +88,7 @@ export function Projects() {
     <section
       id="work"
       ref={sectionRef}
-      className="min-h-screen px-8 py-32"
+      className="min-h-0 md:min-h-screen px-8 py-16 md:py-32"
     >
       <div className="max-w-[1600px] w-full mx-auto">
         <motion.div
@@ -120,7 +108,7 @@ export function Projects() {
           </h2>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 auto-rows-[300px] gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 auto-rows-[300px] gap-4">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -135,6 +123,10 @@ export function Projects() {
                 <img
                   src={project.image}
                   alt={project.title}
+                  loading="lazy"
+                  decoding="async"
+                  width={1600}
+                  height={900}
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/20 opacity-60 group-hover:opacity-90 transition-opacity duration-300" />
@@ -174,7 +166,10 @@ export function Projects() {
                   {project.description}
                 </p>
 
-                <motion.button
+                <motion.a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   initial={{ x: -10, opacity: 0 }}
                   animate={
                     hoveredProject === project.id
@@ -186,7 +181,7 @@ export function Projects() {
                 >
                   <span className="text-sm uppercase tracking-wider">View Project</span>
                   <ExternalLink size={16} />
-                </motion.button>
+                </motion.a>
               </div>
             </motion.div>
           ))}

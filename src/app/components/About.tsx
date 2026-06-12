@@ -41,7 +41,7 @@ export function About() {
     <section
       id="about"
       ref={sectionRef}
-      className="min-h-screen flex items-center px-8 py-32"
+      className="min-h-0 md:min-h-screen flex items-center px-8 py-16 md:py-32"
     >
       <div className="max-w-[1600px] w-full mx-auto">
         <motion.div
