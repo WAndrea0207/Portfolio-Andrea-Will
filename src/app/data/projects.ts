@@ -76,7 +76,7 @@ export const projectsData: ProjectDetail[] = [
     description: 'SEO and performance optimization for a photographer portfolio site.',
     image: '/projects/nina-carducci.webp',
     tags: ['SEO', 'Performance', 'Lighthouse', 'Schema.org'],
-    github: 'https://github.com/WAndrea0207/Nina_Carducci',
+    github: 'https://wandrea0207.github.io/Nina_Carducci/',
     size: 'medium',
     context:
       'Nina Carducci is a talented photographer whose portfolio site was experiencing significant performance and SEO issues. Her existing website was slow to load and not optimized for search engines, which meant potential clients couldn\'t find her easily online. The project required a comprehensive audit and systematic optimization.',
