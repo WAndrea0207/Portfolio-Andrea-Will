@@ -64,7 +64,7 @@ export function About() {
                 className="text-4xl md:text-5xl mb-8 leading-tight"
                 style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}
               >
-                Full-stack Developper
+                Full-stack Developer
               </h2>
 
               <div className="space-y-6 text-foreground/70 text-lg leading-relaxed">
