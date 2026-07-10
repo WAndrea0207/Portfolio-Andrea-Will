@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { useEffect, useRef } from 'react';
 import { Typewriter } from './Typewriter';
+import { ScrollButton } from './ScrollButton';
 
 export function Hero() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -97,7 +98,7 @@ export function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="text-lg text-foreground/60 max-w-2xl"
           >
-            Crafting exceptional digital experiences through clean code and thoughtful design
+            Crafting digital experiences through clean code and thoughtful design
           </motion.p>
         </motion.div>
       </div>
@@ -109,6 +110,15 @@ export function Hero() {
         className="absolute bottom-12 left-1/2 -translate-x-1/2"
       >
         <div className="w-[1px] h-16 bg-gradient-to-b from-accent/0 via-accent to-accent/0" />
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: 40 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.8 }}
+        className="absolute right-8 bottom-12 md:right-12"
+      >
+        <ScrollButton targetId="about" label="Explore my work" />
       </motion.div>
     </section>
   );

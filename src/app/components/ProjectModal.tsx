@@ -48,7 +48,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
             className="fixed inset-0 z-50 flex items-center justify-center p-4"
           >
             <div
-              className="bg-secondary border border-foreground/10 rounded-lg max-w-lg w-full p-6 overflow-y-auto max-h-[90vh]"
+              className="bg-secondary border border-foreground/10 rounded-lg max-w-lg w-full p-6 overflow-y-auto max-h-[90vh] project-modal-body"
               onClick={(e) => e.stopPropagation()}
             >
               <div className="flex justify-between items-start mb-4">
@@ -145,6 +145,22 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   <h3 className="text-accent text-xs uppercase tracking-wider mb-2">Results</h3>
                   <p className="text-sm leading-relaxed">{project.results}</p>
                 </div>
+
+                {project.improvements.length > 0 && (
+                  <div>
+                    <h3 className="text-accent text-xs uppercase tracking-wider mb-2">
+                      Future improvements
+                    </h3>
+                    <ul className="space-y-1">
+                      {project.improvements.map((improvement, index) => (
+                        <li key={index} className="flex gap-2 text-sm leading-relaxed">
+                          <span className="text-accent">•</span>
+                          <span>{improvement}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
 
                 <a
                   href={project.github}

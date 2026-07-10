@@ -4,6 +4,7 @@ import { ExternalLink } from 'lucide-react';
 import { projectsData } from '../data/projects';
 import { ProjectModal } from './ProjectModal';
 import { ProjectDetail } from '../types/projects';
+import { ScrollButton } from './ScrollButton';
 
 export function Projects() {
   const [isVisible, setIsVisible] = useState(false);
@@ -118,6 +119,10 @@ export function Projects() {
           </div>
 
           <div className="mt-24 h-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
+
+          <div className="mt-12 flex justify-center">
+            <ScrollButton targetId="contact" label="Next" />
+          </div>
         </div>
       </section>
 

@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
+import { ScrollButton } from './ScrollButton';
 
 export function About() {
   const [isVisible, setIsVisible] = useState(false);
@@ -63,18 +64,18 @@ export function About() {
                 className="text-4xl md:text-5xl mb-8 leading-tight"
                 style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}
               >
-                Building digital products with precision and passion
+                Full-stack Developper
               </h2>
 
               <div className="space-y-6 text-foreground/70 text-lg leading-relaxed">
                 <p>
-                  I'm a developer with a non-traditional background and a strong drive to learn, build, and
-                  improve. My career change into tech taught me how to adapt quickly, solve problems with
-                  curiosity, and stay persistent when facing new challenges.
+                  I started out in audiovisual production, with a Master's degree and a year working in a production company before deciding to move into web development in August 2024, starting out as a self-taught developer. 
+                  Cinema has always been my main passion, and it still shapes how I think about stories, pacing, and atmosphere in the interfaces I design.
                 </p>
                 <p>
-                  Today, I create clean, user-focused web projects and keep sharpening my skills 
-                  through hands-on work and continuous learning.
+                  Today, I'm a frontend developer in a one-year work-study program at Orange with OpenClassrooms, where I learn by shipping real projects rather than just following theory.
+                  I like building clean, user-focused web experiences and I bring the same attention to detail I had in production industry.
+                
                 </p>
               </div>
             </motion.div>
@@ -108,9 +109,16 @@ export function About() {
               </div>
             </motion.div>
           </div>
+
         </motion.div>
 
+        
+
         <div className="mt-24 h-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
+
+        <div className="mt-12 flex justify-center">
+          <ScrollButton targetId="experience" label="Next" />
+        </div>
       </div>
     </section>
   );

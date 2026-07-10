@@ -50,7 +50,7 @@ export function Contact() {
 
           <p className="text-lg text-foreground/70 mb-16 max-w-2xl mx-auto">
             Have a project in mind or just want to chat? I'm always open to
-            discussing new opportunities and creative ideas.
+            discussing new opportunities and ideas.
           </p>
 
           <motion.a

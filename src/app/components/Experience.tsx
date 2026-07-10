@@ -1,5 +1,6 @@
 import { motion } from 'motion/react';
 import { useEffect, useRef, useState } from 'react';
+import { ScrollButton } from './ScrollButton';
 
 interface TimelineItem {
   year: string;
@@ -93,7 +94,12 @@ export function Experience() {
 
         <div className="relative">
           {/* Ligne verticale */}
-          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-foreground/10 -translate-x-1/2" />
+          <div
+            className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px -translate-x-1/2"
+            style={{
+              background: 'linear-gradient(to bottom, transparent 0%, rgb(255 255 255 / 0.1) 15%, rgb(255 255 255 / 0.1) 85%, transparent 100%)',
+            }}
+          />
 
           {timeline.map((item, index) => {
             const isLeft = index % 2 === 0;
@@ -137,6 +143,10 @@ export function Experience() {
         </div>
 
         <div className="mt-24 h-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
+
+        <div className="mt-12 flex justify-center">
+          <ScrollButton targetId="work" label="Next" />
+        </div>
       </div>
     </section>
   );

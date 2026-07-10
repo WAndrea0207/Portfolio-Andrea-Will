@@ -32,7 +32,11 @@ export const projectsData: ProjectDetail[] = [
     ],
     results:
       'Successfully delivered a fully functional portfolio site featuring a responsive gallery with category filters, a secure admin login system, and an image upload modal. The platform enables Charlotte to manage Sophie\'s portfolio in real-time.',
-    improvements: [],
+    improvements: [
+      'Add image compression before upload',
+      'Add project search and sorting',
+      'Create a dedicated dashboard for the admin',
+    ],
   },
 
   {
@@ -67,7 +71,11 @@ export const projectsData: ProjectDetail[] = [
     ],
     results:
       'Delivered a fully functional Kasa property rental platform with a polished, responsive design. The application features a gallery carousel with smart navigation (loops back to first/last image), collapsible description sections, and all 20 properties from the JSON file properly displayed.',
-    improvements: [],
+    improvements: [
+      'Add property filtering and favorites',
+      'Integrate a booking flow',
+      'Add user authentication for future features',
+    ],
   },
 
   {
@@ -103,6 +111,10 @@ export const projectsData: ProjectDetail[] = [
     ],
     results:
       'Successfully optimized Nina\'s portfolio site with dramatic improvements: Lighthouse performance score increased significantly, page load time reduced by 40%, Core Web Vitals improved to "Good", and SEO score reached 90+. Implemented Schema.org markup for local photographer services and added proper meta descriptions.',
-    improvements: [],
+    improvements: [
+      'Add a sitemap',
+      'Set up ongoing performance monitoring',
+      'Improve social previews with richer meta tags',
+    ],
   },
 ];
