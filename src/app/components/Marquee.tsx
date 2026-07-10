@@ -10,7 +10,7 @@ export function Marquee({
   direction = 'left',
 }: MarqueeProps) {
   return (
-    <div className="w-full overflow-hidden py-8 border-y border-foreground/10">
+    <div className="w-full overflow-hidden py-8 border-y border-foreground/10" aria-hidden="true">
       <div
         className="flex w-max"
         style={{

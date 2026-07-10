@@ -59,6 +59,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   onClick={onClose}
                   className="text-foreground/50 hover:text-accent flex-shrink-0 ml-4"
                   type="button"
+                  aria-label="Close"
                 >
                   <X size={20} />
                 </button>

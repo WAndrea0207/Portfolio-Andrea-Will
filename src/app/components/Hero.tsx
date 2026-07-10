@@ -100,6 +100,10 @@ export function Hero() {
           >
             Crafting digital experiences through clean code and thoughtful design
           </motion.p>
+
+          <div className="flex justify-center mt-10 md:hidden">
+            <ScrollButton targetId="about" label="Explore my work" />
+          </div>
         </motion.div>
       </div>
 
@@ -116,7 +120,7 @@ export function Hero() {
         initial={{ opacity: 0, x: 40 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        className="absolute right-8 bottom-12 md:right-12"
+        className="hidden md:block absolute right-8 bottom-12 md:right-12"
       >
         <ScrollButton targetId="about" label="Explore my work" />
       </motion.div>

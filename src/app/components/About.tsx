@@ -74,7 +74,7 @@ export function About() {
                 </p>
                 <p>
                   Today, I'm a frontend developer in a one-year work-study program at Orange with OpenClassrooms, where I learn by shipping real projects rather than just following theory.
-                  I like building clean, user-focused web experiences and I bring the same attention to detail I had in production industry.
+                  I like building clean, user-focused web experiences and I bring the same attention to detail I had in the production industry.
                 
                 </p>
               </div>

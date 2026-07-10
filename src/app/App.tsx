@@ -12,7 +12,8 @@ export default function App() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <CustomCursor />
       <Navigation />
-      <Hero />
+      <main>
+        <Hero />
       <Marquee
         items={['React', 'TypeScript', 'Node.js', 'Tailwind', 'Figma', 'Git', 'Docker', 'MySQL']}
         duration={25}
@@ -21,6 +22,7 @@ export default function App() {
       <Experience />
       <Projects />
       <Contact />
+      </main>
     </div>
   );
 }
