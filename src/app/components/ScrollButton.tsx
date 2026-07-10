@@ -4,9 +4,10 @@ interface ScrollButtonProps {
   targetId: string;
   label?: string;
   showArrow?: boolean;
+  className?: string;
 }
 
-export function ScrollButton({ targetId, label = 'Next', showArrow = true }: ScrollButtonProps) {
+export function ScrollButton({ targetId, label = 'Next', showArrow = true, className = '' }: ScrollButtonProps) {
   const handleClick = () => {
     const element = document.getElementById(targetId);
     if (element) {
@@ -17,9 +18,9 @@ export function ScrollButton({ targetId, label = 'Next', showArrow = true }: Scr
   return (
     <button
       onClick={handleClick}
-      className="flex items-center gap-2 px-6 py-3 text-accent hover:text-accent/80 transition-colors"
+      className={`inline-flex items-center gap-3 px-8 py-4 bg-accent/10 border border-accent/20 rounded-full hover:bg-accent/20 transition-all text-accent text-sm uppercase tracking-wider ${className}`}
     >
-      <span className="text-sm uppercase tracking-wider">{label}</span>
+      <span>{label}</span>
       {showArrow && <ChevronDown size={18} />}
     </button>
   );
