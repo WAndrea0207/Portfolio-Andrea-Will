@@ -57,19 +57,29 @@ export function About() {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               <h2
-                className="text-4xl md:text-5xl mb-8 leading-tight"
+                className="text-4xl md:text-5xl leading-tight mb-6"
                 style={{ fontFamily: 'var(--font-display)', fontWeight: 700 }}
               >
                 Full-stack Developer
               </h2>
 
               <div className="space-y-6 text-foreground/70 text-lg leading-relaxed">
+                <div className="float-right w-35 h-50 rounded-[50%] ml-6 mb-4 border-2 border-accent/20 overflow-hidden">
+                  <motion.img
+                    src="/projects/photo-profil.webp"
+                    alt="Andrea Will"
+                    initial={{ opacity: 0 }}
+                    animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    className="w-full h-full object-cover object-[50%_25%]"
+                  />
+                </div>
                 <p>
                   I started out in audiovisual production, with a Master's degree and a year working in a production company before deciding to move into web development in August 2024, starting out as a self-taught developer. 
                   Cinema has always been my main passion, and it still shapes how I think about stories, pacing, and atmosphere in the interfaces I design.
                 </p>
                 <p>
-                  Today, I'm a frontend developer in a one-year work-study program at Orange with OpenClassrooms, where I learn by shipping real projects rather than just following theory.
+                  Today, I'm a full-stack developer in a one-year work-study program at Orange with OpenClassrooms, where I learn by shipping real projects rather than just following theory.
                   I like building clean, user-focused web experiences and I bring the same attention to detail I had in the production industry.
                 
                 </p>
