@@ -145,7 +145,7 @@ export function Experience() {
         <div className="mt-24 h-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
 
         <div className="mt-12 flex justify-center">
-          <ScrollButton targetId="work" label="Next" />
+          <ScrollButton targetId="work" label="Work" />
         </div>
       </div>
     </section>

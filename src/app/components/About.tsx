@@ -23,20 +23,16 @@ export function About() {
     return () => observer.disconnect();
   }, []);
 
-  const skills: string[] = [
-    'React',
-    'TypeScript',
-    'Node.js',
-    'Next.js',
-    'Tailwind CSS',
-    'PostgreSQL',
-    'GraphQL',
-    'AWS',
-    'Docker',
-    'Git',
-    'Figma',
-    'REST APIs',
+  const mainSkills = [
+    { name: 'React', level: 85 },
+    { name: 'Node.js', level: 85 },
+    { name: 'Tailwind CSS', level: 80 },
+    { name: 'TypeScript', level: 75 },
+    { name: 'Next.js', level: 70 },
+    { name: 'PostgreSQL', level: 65 },
   ];
+
+  const secondarySkills = ['GraphQL', 'AWS', 'Docker', 'Git', 'Figma', 'REST APIs'];
 
   return (
     <section
@@ -92,8 +88,29 @@ export function About() {
                 Skills & Technologies
               </h3>
 
-              <div className="flex flex-wrap gap-3">
-                {skills.map((skill, index) => (
+              <div className="space-y-5">
+                {mainSkills.map((skill, index) => (
+                  <div key={skill.name}>
+                    <div className="flex justify-between mb-1.5">
+                      <span className="text-sm text-foreground/80">{skill.name}</span>
+                      <span className="text-sm text-accent">{skill.level}%</span>
+                    </div>
+                    <div className="w-full h-1.5 bg-foreground/10 rounded-full overflow-hidden">
+                      <motion.div
+                        initial={{ width: 0 }}
+                        animate={isVisible ? { width: `${skill.level}%` } : { width: 0 }}
+                        transition={{ duration: 1, delay: 0.6 + index * 0.1, ease: 'easeOut' }}
+                        className="h-full bg-accent rounded-full"
+                      />
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-8 h-px bg-foreground/10" />
+
+              <div className="flex flex-wrap gap-3 mt-8">
+                {secondarySkills.map((skill, index) => (
                   <motion.span
                     key={skill}
                     initial={{ opacity: 0, scale: 0.8 }}
@@ -101,7 +118,7 @@ export function About() {
                       isVisible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }
                     }
                     transition={{ duration: 0.4, delay: 0.6 + index * 0.05 }}
-                    className="px-5 py-2.5 bg-accent/10 text-accent border border-accent/20 rounded-full text-sm tracking-wide hover:bg-accent/20 hover:border-accent/40 transition-all duration-300"
+                    className="px-5 py-2.5 bg-accent/10 text-accent border border-accent/20 rounded-full text-sm"
                   >
                     {skill}
                   </motion.span>
@@ -117,7 +134,7 @@ export function About() {
         <div className="mt-24 h-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
 
         <div className="mt-12 flex justify-center">
-          <ScrollButton targetId="experience" label="Next" />
+          <ScrollButton targetId="experience" label="About" />
         </div>
       </div>
     </section>

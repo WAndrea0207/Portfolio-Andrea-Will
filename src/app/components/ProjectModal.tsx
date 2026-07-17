@@ -97,7 +97,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                         <p className="text-xs text-accent/70 mb-1">Frontend</p>
                         <div className="flex flex-wrap gap-1">
                           {project.technicalStack.frontend.map((t) => (
-                            <span key={t} className="text-xs px-2 py-0.5 bg-accent/10 rounded">
+                            <span key={t} className="text-xs px-2 py-0.5 bg-accent/10 text-accent border border-accent/20 rounded-full">
                               {t}
                             </span>
                           ))}
@@ -109,7 +109,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                         <p className="text-xs text-accent/70 mb-1">Backend</p>
                         <div className="flex flex-wrap gap-1">
                           {project.technicalStack.backend.map((t) => (
-                            <span key={t} className="text-xs px-2 py-0.5 bg-accent/10 rounded">
+                            <span key={t} className="text-xs px-2 py-0.5 bg-accent/10 text-accent border border-accent/20 rounded-full">
                               {t}
                             </span>
                           ))}
@@ -121,7 +121,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                         <p className="text-xs text-accent/70 mb-1">Tools</p>
                         <div className="flex flex-wrap gap-1">
                           {project.technicalStack.tools.map((t) => (
-                            <span key={t} className="text-xs px-2 py-0.5 bg-accent/10 rounded">
+                            <span key={t} className="text-xs px-2 py-0.5 bg-accent/10 text-accent border border-accent/20 rounded-full">
                               {t}
                             </span>
                           ))}
@@ -135,7 +135,7 @@ export function ProjectModal({ project, isOpen, onClose }: ProjectModalProps) {
                   <h3 className="text-accent text-xs uppercase tracking-wider mb-2">Skills</h3>
                   <div className="flex flex-wrap gap-1">
                     {project.skillsDeveloped.map((skill) => (
-                      <span key={skill} className="text-xs px-2 py-0.5 bg-foreground/10 rounded">
+                      <span key={skill} className="text-xs px-2 py-0.5 bg-accent/10 text-accent border border-accent/20 rounded-full">
                         {skill}
                       </span>
                     ))}

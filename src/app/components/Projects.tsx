@@ -77,7 +77,7 @@ export function Projects() {
                     loading="lazy"
                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-background/20 opacity-60 group-hover:opacity-90 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-background/60 opacity-80 group-hover:opacity-100 transition-opacity duration-300" />
                 </div>
 
                 <div className="absolute inset-0 p-6 flex flex-col justify-end">
@@ -121,7 +121,7 @@ export function Projects() {
           <div className="mt-24 h-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
 
           <div className="mt-12 flex justify-center">
-            <ScrollButton targetId="contact" label="Next" />
+            <ScrollButton targetId="contact" label="Contact" />
           </div>
         </div>
       </section>
