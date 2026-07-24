@@ -144,7 +144,7 @@ export function About() {
         <div className="mt-24 h-[1px] bg-gradient-to-r from-transparent via-foreground/10 to-transparent" />
 
         <div className="mt-12 flex justify-center">
-          <ScrollButton targetId="experience" label="About" />
+          <ScrollButton targetId="experience" label="Background" />
         </div>
       </div>
     </section>

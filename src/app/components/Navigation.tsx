@@ -17,16 +17,22 @@ export function Navigation() {
     >
       <div className="max-w-[1600px] mx-auto flex justify-end items-center gap-12">
         <button
-          onClick={() => scrollToSection('work')}
-          className="uppercase tracking-wider text-sm text-foreground/70 hover:text-accent transition-colors duration-300"
-        >
-          Work
-        </button>
-        <button
           onClick={() => scrollToSection('about')}
           className="uppercase tracking-wider text-sm text-foreground/70 hover:text-accent transition-colors duration-300"
         >
           About
+        </button>
+        <button
+          onClick={() => scrollToSection('experience')}
+          className="uppercase tracking-wider text-sm text-foreground/70 hover:text-accent transition-colors duration-300"
+        >
+          Background
+        </button>
+        <button
+          onClick={() => scrollToSection('work')}
+          className="uppercase tracking-wider text-sm text-foreground/70 hover:text-accent transition-colors duration-300"
+        >
+          Work
         </button>
         <button
           onClick={() => scrollToSection('contact')}

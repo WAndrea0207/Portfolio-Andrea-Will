@@ -52,7 +52,7 @@ export function Projects() {
             animate={isVisible ? { opacity: 1 } : { opacity: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="uppercase tracking-[0.3em] text-sm text-accent mb-4">Selected Work</p>
+            <p className="uppercase tracking-[0.3em] text-sm text-accent mb-4">Work</p>
             <h2 className="text-5xl md:text-7xl mb-20 leading-tight" style={{ fontFamily: 'var(--font-display)' }}>
               Recent Projects
             </h2>
