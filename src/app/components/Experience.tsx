@@ -15,7 +15,7 @@ const timeline: TimelineItem[] = [
     title: 'Full-Stack Web Developer — Work-Study',
     place: 'Orange x OpenClassrooms',
     description:
-      'Full-stack apprenticeship at Orange while completing the OpenClassrooms program. Building production-oriented projects with React, Node.js, MongoDB and SEO optimization.',
+      'Full-stack apprentice at Orange while completing the OpenClassrooms program. Building production-oriented projects with React, Node.js, MongoDB and SEO optimization.',
   },
   {
     year: '2024 - 2025',

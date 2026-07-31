@@ -24,12 +24,12 @@ export function About() {
   }, []);
 
   const mainSkills = [
-    { name: 'React', level: 85 },
-    { name: 'Node.js', level: 85 },
-    { name: 'Tailwind CSS', level: 80 },
-    { name: 'TypeScript', level: 75 },
-    { name: 'Next.js', level: 70 },
-    { name: 'PostgreSQL', level: 65 },
+    { name: 'React', level: 65 },
+    { name: 'Node.js', level: 65 },
+    { name: 'Tailwind CSS', level: 60 },
+    { name: 'TypeScript', level: 55 },
+    { name: 'MongoDB', level: 50 },
+    { name: 'Next.js', level: 40 }
   ];
 
   const secondarySkills = ['GraphQL', 'AWS', 'Docker', 'Git', 'Figma', 'REST APIs'];

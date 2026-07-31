@@ -100,5 +100,6 @@
 }
 
 .animate-marquee-right {
-  animation-name: marquee-right;
+  animation: marquee-right var(--marquee-duration, 25s) linear infinite;
+  will-change: transform;
 }
