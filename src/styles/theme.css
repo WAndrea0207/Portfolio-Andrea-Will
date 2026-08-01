@@ -49,11 +49,16 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
-    cursor: none;
   }
 
-  * {
-    cursor: none !important;
+  @media (pointer: fine) {
+    body {
+      cursor: none;
+    }
+
+    * {
+      cursor: none !important;
+    }
   }
 
   ::selection {
